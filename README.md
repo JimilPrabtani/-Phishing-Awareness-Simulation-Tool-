@@ -185,6 +185,9 @@ Open your browser and navigate to:
 http://localhost:5000
 ```
 
+<img width="2104" height="961" alt="cli" src="https://github.com/user-attachments/assets/1a6752eb-fa8a-45d1-ac39-d72c20dedf28" />
+
+
 ---
 
 ## ⚙️ Configuration
@@ -212,6 +215,9 @@ All configuration options live in `config.py` and can be overridden via environm
 4. Add target email addresses
 5. Click **"Send Campaign"** to dispatch the simulated phishing emails
 
+<img width="3072" height="1670" alt="Dashboard" src="https://github.com/user-attachments/assets/cb3ead12-4acc-47a5-84b9-4d2f62a560db" />
+
+
 ### Viewing Results
 - Go to the **Dashboard** to see all campaigns
 - Click on a campaign to view detailed stats:
@@ -219,6 +225,12 @@ All configuration options live in `config.py` and can be overridden via environm
   - Number of clicks
   - Click rate (%)
   - Per-recipient details (IP, User-Agent, timestamp)
+
+<img width="3072" height="1670" alt="results" src="https://github.com/user-attachments/assets/662f5d2e-5829-4f64-9892-f79a67ba550f" />
+<img width="3072" height="1670" alt="results" src="https://github.com/user-attachments/assets/6947d9f8-af40-49b1-a7ee-d8f3a8db9dec" />
+<img width="3072" height="1670" alt="Screenshot From 2026-03-06 01-31-32" src="https://github.com/user-attachments/assets/55ffa85d-b0e3-4a94-88d0-c211975cc856" />
+
+
 
 ---
 
