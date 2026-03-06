@@ -1,0 +1,37 @@
+<html>
+
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <div style="max-width: 600px; margin: auto; border: 1px solid #ddd; padding: 30px;">
+    <h2 style="color: #e67e22;">🔒 Unusual Sign-In Activity Detected</h2>
+    <p>Hello,</p>
+    <p>We detected a sign-in to your account <strong>{{ target_email }}</strong>
+      from an unrecognized device:</p>
+
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+      <tr>
+        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Location</strong></td>
+        <td style="padding: 8px; border: 1px solid #ddd;">Moscow, Russia</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Device</strong></td>
+        <td style="padding: 8px; border: 1px solid #ddd;">Unknown Linux Machine</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Time</strong></td>
+        <td style="padding: 8px; border: 1px solid #ddd;">Today, 3:42 AM</td>
+      </tr>
+    </table>
+
+    <p>If this wasn't you, secure your account immediately:</p>
+    <p style="text-align: center;">
+      <a href="{{ tracking_url }}" style="background-color: #e67e22; color: white; padding: 14px 28px;
+                text-decoration: none; border-radius: 5px;">
+        Verify My Account
+      </a>
+    </p>
+
+    <p style="color: #888; font-size: 12px;">— {{ sender_name }}</p>
+  </div>
+</body>
+
+</html>

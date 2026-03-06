@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>🎣 Phishing Sim — Admin</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>🎣 Phishing Awareness Simulation — Admin Panel</h1>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+    <div class="flash {{ category }}">{{ message }}</div>
+    {% endfor %}
+    {% endwith %}
+
+    <!-- Create New Campaign -->
+    <div class="card">
+        <h2>📝 New Campaign</h2>
+        <form action="/campaign/new" method="POST">
+            <label>Campaign Name:</label>
+            <input type="text" name="name" placeholder="Q1 2026 Awareness Test" required>
+
+            <label>Email Template:</label>
+            <select name="template">
+                <option value="password_reset">⚠️ Password Reset</option>
+                <option value="it_alert">🔒 IT Security Alert</option>
+            </select>
+
+            <label>Target Emails (comma-separated):</label>
+            <textarea name="emails" rows="3" placeholder="alice@company.com, bob@company.com" required></textarea>
+
+            <button type="submit">Create Campaign</button>
+        </form>
+    </div>
+
+    <!-- Existing Campaigns -->
+    <h2>📋 Campaigns</h2>
+    {% if campaigns %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Template</th>
+            <th>Targets</th>
+            <th>Clicks</th>
+            <th>Click Rate</th>
+            <th>Actions</th>
+        </tr>
+        {% for c in campaigns %}
+        <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.template }}</td>
+            <td>{{ c.total_targets }}</td>
+            <td>{{ c.total_clicks }}</td>
+            <td>{{ c.click_rate }}%</td>
+            <td>
+                <form action="/campaign/{{ c.id }}/send" method="POST" style="display:inline">
+                    <button type="submit">📧 Send</button>
+                </form>
+                <a href="/campaign/{{ c.id }}/results">📊 Results</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No campaigns yet. Create one above.</p>
+    {% endif %}
+</body>
+
+</html>
