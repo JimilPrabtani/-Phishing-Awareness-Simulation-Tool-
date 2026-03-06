@@ -227,7 +227,7 @@ All configuration options live in `config.py` and can be overridden via environm
   - Per-recipient details (IP, User-Agent, timestamp)
 
 <img width="3072" height="1670" alt="results" src="https://github.com/user-attachments/assets/662f5d2e-5829-4f64-9892-f79a67ba550f" />
-<img width="3072" height="1670" alt="results" src="https://github.com/user-attachments/assets/6947d9f8-af40-49b1-a7ee-d8f3a8db9dec" />
+<img width="2104" height="961" alt="BEFORE" src="https://github.com/user-attachments/assets/29d6d725-a9a7-4a94-af10-fc57d9bed44e" />
 <img width="3072" height="1670" alt="Screenshot From 2026-03-06 01-31-32" src="https://github.com/user-attachments/assets/55ffa85d-b0e3-4a94-88d0-c211975cc856" />
 
 
